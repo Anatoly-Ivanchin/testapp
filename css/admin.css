@@ -1,0 +1,220 @@
+@CHARSET "UTF-8";
+
+/* BASIC */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	font-family: arial;
+	color: #000;
+	background: #1e1e1e;
+}
+a {
+	color: #000;
+	text-decoration: underline;
+}
+a:HOVER {
+	text-decoration: none;
+}
+h1 {
+	font-size: 32px;
+	font-weight: normal;
+	margin: 10px 0;
+}
+h2 {
+	font-size: 26px;
+	font-weight: normal;
+}
+img {
+	border: none;
+}
+.clear {
+	float: none;
+	clear: both;
+	width: 100%;
+	height: 0;
+}
+
+/* HEADER */
+
+#admin_page {
+	position: relative;
+	background: #fff;
+}
+	
+#admin_page #header {
+	border-bottom: #2f2f2f 1px solid;
+	color: #fff;
+	padding: 18px 48px;
+	background: #1e1e1e;
+}
+#admin_page #header a {
+	color: #ef9501;
+}
+#admin_page #header_links {
+	float: right;
+	margin-top: 12px;
+}
+#admin_page a#logout {
+	background: url("../images/admin/logout_icon.gif") no-repeat transparent right 0.2em;
+	margin-left: 24px;
+	padding-right: 26px;
+	color: #a1a1a1;
+}
+
+/* BODY */
+
+#admin_page #body {
+	padding: 23px 22px;
+}
+#admin_page #left_column {
+	float: left;
+	width: 280px;
+	margin-right: 10px;
+}
+#admin_page #right_column {
+	float: left;
+}
+#admin_page #content_header {
+	padding-left: 8px;
+	margin-bottom: 50px;
+}	
+
+/* left menu */
+
+#admin_page #admin_menu ul {
+	list-style-type: none;
+}
+#admin_page #admin_menu .slider {
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: underline;
+	padding-left: 21px;
+	line-height: 26px;
+}
+#admin_page #admin_menu .slider:HOVER {
+	text-decoration: none;
+}
+#admin_page #module_list {
+	padding:0;
+	margin: 10px 0px;
+}	
+#admin_page #module_list li.active .slider{
+	background: url("../images/admin/menu_marker.gif") no-repeat transparent left center;
+}
+#admin_page #module_list ul {
+	padding-left: 35px;
+	margin-top: 12px;
+}	
+#admin_page #module_list ul a {
+	color: #686868;
+}
+#admin_page #module_list ul li {
+	margin-bottom: 12px;
+}
+
+/* BREADCRUMBS */
+
+#admin_page #breadcrumbs {
+	list-style-type: none;
+	color: #707070;
+	padding: 0;
+	margin: 13px 0;
+}
+#admin_page #breadcrumbs a {
+	color: #707070;
+}
+#admin_page #breadcrumbs li{
+	display: inline;
+}
+#admin_page #breadcrumbs .splitter {
+	margin: 0 12px;
+}
+#admin_page #breadcrumbs .splitter img {
+	vertical-align: middle;
+}
+
+/* CONTENT */
+
+#admin_page .admin_actions .uLogin {
+	display: inline;
+	margin-left: 20px;
+	vertical-align: sub;
+}
+
+/* main_page */
+
+#admin_page #modulelist, #admin_page #modulelist ul{
+	list-style-type: none;
+}
+
+/* USER PAGE */
+
+#user_img {
+	float: left;
+	margin-right: 12px;
+}
+.user_data {
+	margin-left: 240px;
+}
+.user_data dd {
+	margin-bottom: 24px;
+}
+.user_img_small {
+	width: 100px;
+}
+
+/*  PAGINATOR */
+
+#admin_page .yiiPager {
+	display: block;
+	margin: 25px 0 35px 0;
+	padding: 0px;
+	text-align: center;
+}
+#admin_page .yiiPager li {
+	display: inline-block;
+	margin-right: 30px;
+}
+#admin_page .yiiPager .hidden {
+	display: none;
+}
+#admin_page .yiiPager a {
+	font-size: 14px;
+	font-weight: normal;
+	color: #8e8e8e;
+	border: none;
+	vertical-align: middle;
+	display: inline-block;
+}
+#admin_page .yiiPager .selected a {
+	color: #000;
+	font-size: 24px;
+	background: none;
+}
+#admin_page .yiiPager .previous a, #admin_page .yiiPager .next a {
+	color: #fff;
+	font-size: 0;
+	padding: 9px;
+}
+#admin_page .yiiPager .previous a {
+	background: url("../images/admin/pager/prev.gif") no-repeat left center;
+}
+#admin_page .yiiPager .next a {
+	background: url("../images/admin/pager/next.gif") no-repeat left center;
+}
+
+/*  FOOTER */
+	
+#admin_page #footer {
+	border-bottom: #2f2f2f 1px solid;
+	color: #fff;
+	padding: 18px;
+	text-align: center;
+	margin-top: 50px;
+	background: #1e1e1e;
+}
+#admin_page #footer a {
+	color: #69d8f8;
+}

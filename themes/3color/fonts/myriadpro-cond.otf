@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/assets/a724bd5e/jquery.js"></script>
+<script type="text/javascript" src="/assets/188ca453/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets/188ca453/additional-methods.js"></script>
+<script type="text/javascript" src="/assets/188ca453/jquery.jfvalidate.helper.js"></script>
+<title>Login to PPRD East admin | OPPartners CMS System </title>
+<link href="http://euroeastcp.eu/themes/BackOffice/styles/global.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="http://euroeastcp.eu/themes/BackOffice/styles/login.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+<div class="LoginForm">
+    <h1>PPRD East Project</h1>
+    <form id="ejsvformid1" action="/index.php?r=User/admin/user/login" method="post">
+<fieldset>
+<input type="hidden" value="ecd023fcbcc996fddedb61ca5a9f94f8" name="FORM_ID[1325079815]" id="FORM_ID_1325079815" />    <!--<fieldset>-->
+        <h2 class="User">Login</h2>
+                <div class="Input">
+            <label for="username">User name:</label><br/>
+            <input name="User[Email]" id="User_Email" type="text" value="" />        </div>
+        <div class="Input">
+            <label for="password">Password:</label><br/>
+            <input name="User[Password]" id="User_Password" type="password" value="" />        </div>
+        <div class="Remember">
+            <input type="checkbox" name="remember" id="remember" />
+            <label><a onclick="CheckRemember();">Remember me on this computer</a></label>
+        </div>
+        <div class="Output">
+            <input type="submit" value="Sign in" class="Button" />
+            <a href="/index.php?r=User/admin/user/forgotPassword" title="Forgot password" class="ForgotPassword">Forgot password</a>
+        </div>
+    <!--</fieldset> -->
+    <script>
+	function CheckRemember()
+	{
+		if ($('#remember').attr('checked'))
+			$('#remember').attr('checked', false);
+		else
+			$('#remember').attr('checked', true);
+	}
+	</script>
+    </fieldset>
+</form></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(document).ready(function() {
+$("#ejsvformid1").validate({"rules":{"User[Email]":{"email":true},"User[Password]":{"minlength":5,"maxlength":32}},"messages":{"User[Email]":{"email":"Email is not a valid email address."},"User[Password]":{"minlength":"Password must be 5-32 characters.","maxlength":"Password must be 5-32 characters."}}});
+});
+/*]]>*/
+</script>
+</body>
+</html>

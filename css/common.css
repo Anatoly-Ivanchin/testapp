@@ -1,0 +1,330 @@
+@CHARSET "UTF-8";
+
+dt {
+	font-weight: bold;
+}
+
+.clear {
+	float: none;
+	clear: both;
+	height: 0px;
+}
+/* ACTIONS */
+.admin_actions {
+	padding: 4px;
+}
+.admin_actions a {
+	margin: 0 6px;
+}
+
+/* USER PANEL */
+
+#user_menu_area{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 20%;
+	background: transparent;
+	z-index: 1000;
+}
+#user_menu{
+	position: absolute;
+	right: 8%;
+	top: 0px;
+	background: url("/images/admin/transparent_bg.png") repeat;
+	padding: 12px 24px;
+	-moz-border-radius: 0 0 8px 8px;
+	-webkit-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+	z-index: 1001;
+	font-size: 12px;
+}
+#user_menu .row{
+	margin: 6px 0;
+}
+#user_menu .row .cell{
+	width: 160px;
+	display: inline-block;
+	text-align: right;
+}
+#user_menu .row .firstColumn{
+	margin-right: 0px;
+	width: 210px;
+}
+#user_menu .row label {
+	margin-right: 6px;
+	width: auto;
+}
+#user_menu .row label.long {
+	width: auto;
+}
+#user_menu input[type="checkbox"] {
+	vertical-align: inherit;
+}
+#user_menu #reg_link, #user_menu #user_name {
+	color: #EF9501;
+}
+#user_menu #user_ava {
+	float: left;
+}
+#user_menu #user_ava img {
+	width: 50px;
+	height: 50px;
+}
+#user_menu #user_data {
+	margin-left: 64px;
+	white-space: nowrap;
+}
+#user_menu #user_name {
+	margin-bottom: 2px;
+}
+#user_menu .admin_actions {
+	display: inline;
+	float: none;
+}
+
+/* FORM */
+
+#fancybox-overlay {
+	position: static;
+}
+form {
+	text-align: left;
+}
+#form h1 {
+	font-size:26px;
+	font-weight : normal;
+	text-align: center;
+}
+#form hr {
+	margin: 30px 50px;
+	border: none;
+	border-top: 1px solid #b4b4b4;
+}
+#form .simple {
+	margin: 6px 100px 6px 0;
+}
+form .simple {
+	margin: 12px 0;
+}
+#form .row {
+	margin: 6px 12px;
+}
+form .row {
+	margin: 24px 0;
+}
+form .action {
+	margin-left: 200px;
+}
+#form .action {
+	text-align: right;
+}
+form input, form textarea, form select {
+	border: 1px solid #b4b4b4;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: auto;
+	height: auto;
+	padding: 1px 0;
+	margin: 0;
+}
+#form input[type=text], #form textarea, #form select  {
+	width: 592px;
+}
+form .action input {
+	background: url("../images/admin/button_bg.gif") repeat-x #e9e9e9 top;
+	border-bottom: 1px solid #666;
+	margin: 0 14px 0 0;
+	padding: 3px 28px;
+	cursor: pointer;
+	width: auto;
+}
+#form .action input {
+	margin: 0 0 0 14px;
+}
+form label {
+	width: 180px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 20px;
+	vertical-align: top;
+}
+form .row label{
+	text-align: left;
+}	
+form span.required {
+	color: #00c6ff;
+}
+form input[type=checkbox] {
+	width: auto;
+	vertical-align: bottom;
+}
+           
+
+/* form tabs */
+
+#form .tabs {
+	border-bottom: 1px solid #c3c3c3;
+	padding: 8px 0;
+}
+#form .tabs li {
+	display: inline-block;
+}
+#form .tabs a {
+	background: url("../images/admin/tab_bg.gif") repeat-x bottom;
+	border: 1px solid #c3c3c3;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 0;
+	padding: 8px;
+	font-weight: normal;
+	height: 14px;
+	line-height: 14px;  
+}
+#form .tabs a:HOVER {
+	background: url("../images/admin/tab_bg_hover.gif") repeat-x center center #69d8f8;
+	color: #666;
+}
+#form .tabs a.active {
+	background: none;
+	border-bottom: 1px solid white;
+}
+#form .yiiTab .view {
+	border: 1px solid #c3c3c3;
+	border-top: none;
+	padding: 12px 0;
+}
+.captchacode {
+	display: inline-block;
+}
+.captchacode input {
+	display: block;
+}
+.captchacode img {
+	vertical-align: middle;
+}
+
+/* form error */
+
+form label.error, form label.error span {
+	color: #CD0A0A;
+}
+form input.error, form textarea.error {
+	border-color: #CD0A0A;
+}
+.errorSummary {
+	border: 1px solid #CD0A0A;
+	background: #FEF1EC url("../images/admin/icons/error.png") no-repeat 20px center;
+	color: #CD0A0A;
+}
+
+/* MESSAGES */
+
+#success, #info, .errorSummary {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: 24px 0;
+	padding: 24px 24px 24px 64px;
+	max-width: 600px;
+	min-width: 200px;
+}
+#success, #info {
+	border: 1px solid #FAD42E;
+	background: #FBEC88 url("../images/admin/icons/ok.png") no-repeat 20px center;
+	color: #363636;
+}
+#info {
+	background: #FBEC88 url("../images/admin/icons/info.png") no-repeat 20px center;
+}
+
+/* Upload */
+#form #uploaded_files div, #form #exists_files div {
+	display: inline-block;
+	position: relative;
+	padding: 5px;
+}
+#form #uploaded_files .uploaded_img {
+	vertical-align:middle;
+	width: 100px;
+}
+#form #uploaded_files a, #form #exists_files a {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* PARAMS */
+#form .param_val_list {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+#form input.new_param_val_field {
+	width: 125px;
+}
+
+/* data table */
+
+#content .dataGrid {
+	margin-bottom: 5px;
+	width: 100%;
+}	
+#content .dataGrid tr {
+	height: 32px;	 
+}
+#content .dataGrid th {
+	text-align: left;
+	background: url("../images/admin/grey_pixel.gif") repeat-x transparent left 24px;
+	height: 40px;
+	vertical-align: text-top;
+	font-size: 18px;
+	font-weight: normal;
+	white-space: nowrap;
+}
+#content .dataGrid th a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: normal;
+	padding: 0 16px;
+}
+.dataGrid th .desc {
+	background: url("../images/admin/arrow_up.gif") no-repeat 5px;
+}
+.dataGrid th .asc {
+	background: url("../images/admin/arrow_down.gif") no-repeat 5px;
+}
+#content .dataGrid td:FIRST-CHILD{
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+#content .dataGrid td:LAST-CHILD{
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	text-align: right;
+}
+.dataGrid tr.odd td {
+	background: #eee;
+}
+#content .dataGrid tr:HOVER td {
+	background: #69d8f8
+}
+#content .dataGrid td {
+	padding: 4px 16px;
+}
+div.admin_actions {
+	margin-top: 35px;
+}
+.admin_actions .create {
+	background: url("../images/admin/create.gif") no-repeat left center;
+	font-size: 14px;
+	color: #000;
+	padding: 4px 0 4px 33px ;
+	margin: 30px 0 0 21px;	
+}
+.dataGrid .admin_actions {
+	float: none;
+}

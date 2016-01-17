@@ -1,0 +1,1 @@
+<?php $this->renderPartial('form/common',array('model'=>$model,'view'=>'continuous')); ?>

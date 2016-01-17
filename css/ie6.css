@@ -1,0 +1,20 @@
+#menu li,#logo img, .update_link, .delete_link
+{
+	behavior: url(/iepngfix/iepngfix.htc);
+}
+
+#catalog_selected_items .left_grad, #catalog_selected_items .right_grad 
+{
+	behavior: url(/iepngfix/iepngfix.htc);
+}
+
+#menu li
+{
+	display: inline;
+	background-position: center top;
+}
+
+#modulelist h3
+{
+	margin-top: 30px;
+}

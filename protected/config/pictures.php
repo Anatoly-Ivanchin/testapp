@@ -1,0 +1,21 @@
+<?php
+$path='/upload/image/';
+return array(
+	'Books'=>array(
+			'preview'=>array(
+					'w'=>32,
+					'h'=>32,
+					'path'=>$path.'test/previews/',
+			),
+			'small'=>array(
+					'w'=>360,
+					'h'=>360,
+					'path'=>$path.'test/small/',
+			),
+			'full'=>array(
+					'w'=>800,
+					'h'=>600,
+					'path'=>$path.'test/full/',
+			),
+	),
+);

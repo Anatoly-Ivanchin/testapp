@@ -1,0 +1,1 @@
+<div id="success"><p><?php eval('echo "'.$msg.'";'); ?></p></div>
