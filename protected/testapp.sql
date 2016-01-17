@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2016-01-15 19:33:01
+Date: 2016-01-18 00:57:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,7 +30,7 @@ CREATE TABLE `authors` (
 -- ----------------------------
 -- Records of authors
 -- ----------------------------
-INSERT INTO `authors` VALUES ('1', 'Федор', 'Достаевский ', 'Михайлович');
+INSERT INTO `authors` VALUES ('1', 'Федор', 'Достоевский ', 'Михайлович');
 INSERT INTO `authors` VALUES ('2', 'Эрих', 'Ремарк', 'Мария');
 INSERT INTO `authors` VALUES ('3', 'Фридрих', 'Ницше', 'Вильгельм');
 INSERT INTO `authors` VALUES ('4', 'Михаил', 'Булгаков', 'Афанасьевич');
@@ -51,14 +51,16 @@ CREATE TABLE `books` (
   PRIMARY KEY (`id`),
   KEY `booksauthor` (`author_id`),
   CONSTRAINT `booksauthor` FOREIGN KEY (`author_id`) REFERENCES `authors` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of books
 -- ----------------------------
-INSERT INTO `books` VALUES ('5', 'Иван Васильевич', '2008-01-19', '2016-01-15 18:59:49', '2016-01-15 18:59:49', 'main_page_mo_1.jpg', '4');
-INSERT INTO `books` VALUES ('7', 'Антихрист', '2006-01-04', '2016-01-15 19:24:22', '2016-01-15 19:24:22', 'Chrysanthemum.jpg', '3');
-INSERT INTO `books` VALUES ('8', 'Преступление и наказание', '2006-01-20', '2016-01-15 19:31:23', '2016-01-15 19:31:23', '8C1BE9D5-B75B-4A8F-B831-213D3D32FEAC.jpg', '1');
+INSERT INTO `books` VALUES ('5', 'Иван Васильевич', '2008-01-19', '2016-01-15 18:59:49', '2010-06-15 18:59:49', 'main_page_mo_1.jpg', '4');
+INSERT INTO `books` VALUES ('7', 'Антихрист', '2006-01-04', '2016-01-15 19:24:22', '2015-10-13 19:24:22', 'Chrysanthemum.jpg', '3');
+INSERT INTO `books` VALUES ('8', 'Преступление и наказание', '1903-01-21', '2016-01-15 19:31:23', '2016-01-15 10:39:59', '8C1BE9D5-B75B-4A8F-B831-213D3D32FEAC.jpg', '1');
+INSERT INTO `books` VALUES ('9', 'Ночь в Лисабоне', '1956-01-11', '2016-01-17 13:25:09', '2016-01-17 15:41:19', '1.jpg', '2');
+INSERT INTO `books` VALUES ('10', 'Норвежский лес', '1987-01-07', '2016-01-18 00:22:35', '2016-01-18 00:24:00', '2015-10-23-roman-005.jpg', '5');
 
 -- ----------------------------
 -- Table structure for `tmp_uploads`
@@ -72,7 +74,7 @@ CREATE TABLE `tmp_uploads` (
   `hasError` char(1) DEFAULT NULL,
   `errorMsg` varchar(512) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1166 DEFAULT CHARSET=cp1251;
+) ENGINE=MyISAM AUTO_INCREMENT=1170 DEFAULT CHARSET=cp1251;
 
 -- ----------------------------
 -- Records of tmp_uploads
@@ -101,7 +103,7 @@ CREATE TABLE `user` (
   `ava_full` varchar(256) DEFAULT NULL,
   `role` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=400 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=401 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
@@ -465,6 +467,7 @@ INSERT INTO `user` VALUES ('396', 'ff030a4fd6a7d718bb8e959257190d6d', '347', 'US
 INSERT INTO `user` VALUES ('397', 'a45f72e1044a53aa3ae291a80b2c27e2', '348', 'USER', 'user348@mail.com', null, '0', null, '2015-08-07 16:22:13', null, null, null, '1', null, null, null, '1');
 INSERT INTO `user` VALUES ('398', '63580f947a1d351426b7e1640bd2f072', '349', 'USER', 'user349@mail.com', null, '0', null, '2015-08-07 16:22:13', null, null, null, '1', null, null, null, '1');
 INSERT INTO `user` VALUES ('399', 'dc074d8489a8723bca78043190e0453a', '350', 'USER', 'user350@mail.com', null, '0', null, '2015-08-07 16:22:13', null, null, null, '1', null, null, null, '1');
+INSERT INTO `user` VALUES ('400', null, 'Марина', 'Фатеева', 'f_marinka@mail.ru', null, '1', '1986-08-28', '2016-01-17 01:13:40', 'Пенза', 'Россия', null, '1', null, 'http://cs624625.vk.me/v624625663/bcf3/B73MEUi000s.jpg', 'http://cs624625.vk.me/v624625663/bcf1/feMq_psG3Yk.jpg', '0');
 
 -- ----------------------------
 -- Table structure for `user_network`
@@ -476,7 +479,7 @@ CREATE TABLE `user_network` (
   `identity` varchar(255) NOT NULL,
   `network` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_network
@@ -488,6 +491,7 @@ INSERT INTO `user_network` VALUES ('44', '45', 'https://plus.google.com/u/0/1142
 INSERT INTO `user_network` VALUES ('45', '46', 'https://plus.google.com/u/0/115431312211277236360/', 'google');
 INSERT INTO `user_network` VALUES ('46', '47', 'https://plus.google.com/u/0/111493308714219953578/', 'google');
 INSERT INTO `user_network` VALUES ('47', '49', 'http://vk.com/id6820604', 'vkontakte');
+INSERT INTO `user_network` VALUES ('48', '400', 'http://vk.com/id2099663', 'vkontakte');
 
 -- ----------------------------
 -- Procedure structure for `add_test_users`
